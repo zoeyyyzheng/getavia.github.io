@@ -11,7 +11,7 @@ Avia is building a revolutionary AI flight assistant that helps pilots:
 
 ## Website
 
-The website is hosted using GitHub Pages and can be accessed at [avia.github.io](https://avia.github.io).
+The website is hosted using GitHub Pages and can be accessed at [avia.github.io](https://avia.github.io)](https://zoeyyyzheng.github.io/getavia.github.io/team.html).
 
 ## Development
 
