@@ -2704,73 +2704,113 @@ footer {
 
 .story-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-top: 40px;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.origin-story, .technical-expertise {
-    padding: 30px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.05);
+.origin-story,
+.problem-validation,
+.market-validation,
+.vision-impact {
+    background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    transition: transform 0.3s ease;
 }
 
-.origin-story h3, .technical-expertise h3 {
-    color: var(--accent);
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: 600;
+.origin-story:hover,
+.problem-validation:hover,
+.market-validation:hover,
+.vision-impact:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 242, 254, 0.1);
 }
 
-.origin-story p {
-    margin-bottom: 16px;
-    line-height: 1.6;
-    color: var(--text-color);
+.story-content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #fff 0%, var(--gradient-end) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.expertise-content {
-    color: var(--text-color);
+.story-content p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
 }
 
-.expertise-list {
-    margin: 20px 0;
-    padding-left: 20px;
+.story-content p:last-child {
+    margin-bottom: 0;
 }
 
-.expertise-list li {
-    margin-bottom: 12px;
-    position: relative;
-    padding-left: 24px;
-    color: var(--text-color);
-}
-
-.expertise-list li::before {
-    content: "•";
-    color: var(--accent);
-    position: absolute;
-    left: 0;
-}
-
-.highlight-text {
-    margin-top: 20px;
-    padding: 15px;
+.stat-highlight {
     background: rgba(0, 242, 254, 0.1);
-    border-left: 4px solid var(--accent);
-    border-radius: 4px;
-    font-weight: 500;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.stat-highlight .stat-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.stat-highlight p {
+    margin: 0;
+    font-size: 1.25rem;
     color: var(--text-color);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .story-content {
-        grid-template-columns: 1fr;
+        gap: 2rem;
     }
-    
-    .origin-story, .technical-expertise {
-        padding: 20px;
+
+    .origin-story,
+    .problem-validation,
+    .market-validation,
+    .vision-impact {
+        padding: 2rem;
+    }
+
+    .story-content h3 {
+        font-size: 1.75rem;
+    }
+
+    .story-content p {
+        font-size: 1rem;
+    }
+
+    .stat-highlight {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .stat-highlight .stat-number {
+        font-size: 3rem;
+    }
+
+    .stat-highlight p {
+        font-size: 1.1rem;
     }
 }
 
